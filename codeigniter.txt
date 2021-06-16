@@ -1,0 +1,65 @@
+1- on install composer
+2- on cree le projet
+
+php composer.phar create-project codeigniter4/appstarter game-store
+
+3-pour lancer le projet
+
+php spark serve
+
+4-creation de controller:
+
+php spark make:controller Catalogue
+
+
+5- kint
+-> env on refractor en ajoutant .
+ligne 17
+CI_ENVIRONMENT = development
+
+6- d represente le vardump ou le dd
+
+7- declaration du template 
+
+/**
+*@var string $message
+*/
+
+8- faker pour une fausse bd
+dans le controller
+
+use Faker\Factory;
+
+9-database c'est dans le fichier .env qu'on fait la configuration
+
+
+php spark make:seeder
+->class name : PopulateProducts
+
+php spark db:seed PopulateProducts
+
+
+10- Migration
+>php spark make:migration CreateProducts
+
+apres on renseigne les champs
+
+apres
+
+php spark migrate
+
+11- model
+
+php spark make:model Products
+
+12- pagination
+change Pager.php on config
+copy defaut_full.php 
+create custom_full.php
+
+13- definir un filter pour controler le system en faisant
+php spark make: filter Authentification
+
+config/filter pour ajouter un nouvel filter
+
+config/event.php
